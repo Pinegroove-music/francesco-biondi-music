@@ -1,16 +1,14 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Instagram, Youtube, Music, Music2, Apple, Cloud } from 'lucide-react';
 
 const Hero: React.FC = () => {
   const socialLinks = [
-    { icon: <Music2 size={18} />, href: "https://open.spotify.com/intl-it/artist/5wkrrI2WhHqfxw1tozdOYt?si=aSRGplY4TVi35YZD_97DZg&nd=1&dlsi=0810a64abd504be7", name: "Spotify" },
-    { icon: <Apple size={18} />, href: "https://music.apple.com/it/artist/francesco-biondi/447030642", name: "Apple Music" },
-    { icon: <Youtube size={18} />, href: "https://music.youtube.com/channel/UCvgS_73rQlPnkeHk30cU2GA", name: "YouTube Music" },
-    { icon: <Music size={18} />, href: "https://www.amazon.it/music/player/artists/B009NCSDDC/francesco-biondi?marketplaceId=APJ6JRA9NG5V4&musicTerritory=IT&ref=dm_sh_z29xpSym9Ya5qOvAIgukYxqkD", name: "Amazon Music" },
-    { icon: <Cloud size={18} />, href: "https://soundcloud.com/francescobiondi?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing", name: "SoundCloud" },
-    { icon: <Instagram size={18} />, href: "https://www.instagram.com/pinegroovemusic/?hl=it", name: "Instagram" },
+    { name: "Spotify", slug: "spotify", color: "1DB954", href: "https://open.spotify.com/intl-it/artist/5wkrrI2WhHqfxw1tozdOYt?si=aSRGplY4TVi35YZD_97DZg&nd=1&dlsi=0810a64abd504be7" },
+    { name: "Apple Music", slug: "applemusic", color: "FA243C", href: "https://music.apple.com/it/artist/francesco-biondi/447030642" },
+    { name: "YouTube Music", slug: "youtubemusic", color: "FF0000", href: "https://music.youtube.com/channel/UCvgS_73rQlPnkeHk30cU2GA" },
+    { name: "SoundCloud", slug: "soundcloud", color: "FF3300", href: "https://soundcloud.com/francescobiondi?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" },
+    { name: "Instagram", slug: "instagram", color: "E4405F", href: "https://www.instagram.com/pinegroovemusic/?hl=it" },
   ];
 
   return (
@@ -60,7 +58,7 @@ const Hero: React.FC = () => {
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 1 }}
-        className="absolute bottom-10 left-6 md:left-12 z-20 flex items-center space-x-5"
+        className="absolute bottom-10 left-6 md:left-12 z-20 flex items-center space-x-6"
       >
         {socialLinks.map((link) => (
           <a 
@@ -68,10 +66,21 @@ const Hero: React.FC = () => {
             href={link.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white/60 hover:text-amber-500 transition-all duration-300 hover:scale-110"
+            className="group relative w-5 h-5 md:w-6 md:h-6 transition-transform duration-300 hover:scale-110"
             title={link.name}
           >
-            {link.icon}
+            {/* White version (default) */}
+            <img 
+              src={`https://cdn.simpleicons.org/${link.slug}/white`} 
+              alt={link.name}
+              className="absolute inset-0 w-full h-full object-contain opacity-60 group-hover:opacity-0 transition-opacity duration-300"
+            />
+            {/* Colored version (on hover) */}
+            <img 
+              src={`https://cdn.simpleicons.org/${link.slug}/${link.color}`} 
+              alt={link.name}
+              className="absolute inset-0 w-full h-full object-contain opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            />
           </a>
         ))}
       </motion.div>

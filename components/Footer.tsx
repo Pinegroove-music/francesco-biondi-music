@@ -1,17 +1,15 @@
 
 import React from 'react';
-import { Instagram, Youtube, Music, Music2, Apple, Cloud } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   const socials = [
-    { icon: <Music2 size={20} />, href: "https://open.spotify.com/intl-it/artist/5wkrrI2WhHqfxw1tozdOYt?si=aSRGplY4TVi35YZD_97DZg&nd=1&dlsi=0810a64abd504be7", name: "Spotify" },
-    { icon: <Apple size={20} />, href: "https://music.apple.com/it/artist/francesco-biondi/447030642", name: "Apple Music" },
-    { icon: <Youtube size={20} />, href: "https://music.youtube.com/channel/UCvgS_73rQlPnkeHk30cU2GA", name: "YouTube Music" },
-    { icon: <Music size={20} />, href: "https://www.amazon.it/music/player/artists/B009NCSDDC/francesco-biondi?marketplaceId=APJ6JRA9NG5V4&musicTerritory=IT&ref=dm_sh_z29xpSym9Ya5qOvAIgukYxqkD", name: "Amazon Music" },
-    { icon: <Cloud size={20} />, href: "https://soundcloud.com/francescobiondi?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing", name: "SoundCloud" },
-    { icon: <Instagram size={20} />, href: "https://www.instagram.com/pinegroovemusic/?hl=it", name: "Instagram" },
+    { name: "Spotify", slug: "spotify", color: "1DB954", href: "https://open.spotify.com/intl-it/artist/5wkrrI2WhHqfxw1tozdOYt?si=aSRGplY4TVi35YZD_97DZg&nd=1&dlsi=0810a64abd504be7" },
+    { name: "Apple Music", slug: "applemusic", color: "FA243C", href: "https://music.apple.com/it/artist/francesco-biondi/447030642" },
+    { name: "YouTube Music", slug: "youtubemusic", color: "FF0000", href: "https://music.youtube.com/channel/UCvgS_73rQlPnkeHk30cU2GA" },
+    { name: "SoundCloud", slug: "soundcloud", color: "FF3300", href: "https://soundcloud.com/francescobiondi?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" },
+    { name: "Instagram", slug: "instagram", color: "E4405F", href: "https://www.instagram.com/pinegroovemusic/?hl=it" },
   ];
 
   return (
@@ -22,18 +20,27 @@ const Footer: React.FC = () => {
           <p className="text-zinc-500 text-xs uppercase tracking-[0.2em]">© {currentYear} All Rights Reserved</p>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-6">
+        <div className="flex flex-wrap justify-center gap-8">
           {socials.map((social) => (
             <a 
               key={social.name}
               href={social.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-zinc-500 hover:text-amber-500 transition-colors"
+              className="group relative w-5 h-5 transition-transform duration-300"
               aria-label={social.name}
               title={social.name}
             >
-              {social.icon}
+              <img 
+                src={`https://cdn.simpleicons.org/${social.slug}/white`} 
+                alt={social.name}
+                className="absolute inset-0 w-full h-full object-contain opacity-40 group-hover:opacity-0 transition-opacity duration-300"
+              />
+              <img 
+                src={`https://cdn.simpleicons.org/${social.slug}/${social.color}`} 
+                alt={social.name}
+                className="absolute inset-0 w-full h-full object-contain opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              />
             </a>
           ))}
         </div>
