@@ -11,10 +11,12 @@ import SpotifyPlaylist from './components/SpotifyPlaylist';
 import Licensing from './components/Licensing';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import CookieConsentComponent from './components/CookieConsent';
 
 const App: React.FC = () => {
   return (
     <div className="bg-zinc-950 text-zinc-100 min-h-screen selection:bg-amber-500/30 selection:text-amber-200">
+      <CookieConsentComponent />
       <Navbar />
       <main>
         <Hero />

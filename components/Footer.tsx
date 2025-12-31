@@ -12,12 +12,27 @@ const Footer: React.FC = () => {
     { name: "Instagram", slug: "instagram", color: "E4405F", href: "https://www.instagram.com/pinegroovemusic/?hl=it" },
   ];
 
+  const handleOpenCookieSettings = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (window.CookieConsent) {
+      window.CookieConsent.showSettings();
+    }
+  };
+
   return (
     <footer className="py-12 px-6 border-t border-zinc-900">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0">
         <div className="text-center md:text-left">
           <h3 className="font-cinzel text-xl font-bold tracking-widest text-white mb-2 uppercase">FRANCESCO BIONDI</h3>
           <p className="text-zinc-500 text-xs uppercase tracking-[0.2em]">© {currentYear} All Rights Reserved</p>
+          <div className="mt-2">
+             <button 
+              onClick={handleOpenCookieSettings}
+              className="text-zinc-600 hover:text-amber-500 text-[10px] uppercase tracking-widest transition-colors duration-300 underline underline-offset-4"
+            >
+              Cookie Settings
+            </button>
+          </div>
         </div>
 
         <div className="flex flex-wrap justify-center gap-8">
