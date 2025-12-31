@@ -1,16 +1,33 @@
-
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Francesco Biondi - Music composer, songwriter and producer</title>
-    <meta name="description" content="Francesco Biondi is a highly accomplished composer, songwriter, and producer based in Rome, Italy. With almost 15 years of experience creating music for a wide range of projects, including films, TV shows, commercials, video games, and documentaries.">
+    
+    <title>Francesco Biondi | Film Composer, Songwriter & Producer</title>
+    <meta name="description" content="Francesco Biondi is a cinematic composer and producer based in Rome, Italy. Creating original scores for films, TV, commercials, and media licensing.">
+    <meta name="keywords" content="Francesco Biondi, Composer, Film Music, Rome, Music Producer, Soundtrack, Media Music">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.francescobiondimusic.com/">
+    <meta property="og:title" content="Francesco Biondi | Film Composer & Producer">
+    <meta property="og:description" content="Official portfolio of Francesco Biondi. Original scores for films, TV, and media licensing.">
+    <meta property="og:image" content="https://pub-704d512baed74c069032320c83ebe2f7.r2.dev/francesco-biondi-wallpaper.webp">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.francescobiondimusic.com/">
+    <meta property="twitter:title" content="Francesco Biondi | Film Composer & Producer">
+    <meta property="twitter:description" content="Official portfolio of Francesco Biondi. Music for film and media.">
+    <meta property="twitter:image" content="https://pub-704d512baed74c069032320c83ebe2f7.r2.dev/francesco-biondi-wallpaper.webp">
+
     <link rel="icon" type="image/svg+xml" href="https://pub-2da555791ab446dd9afa8c2352f4f9ea.r2.dev/media/favicon-francesco-biondi-music.svg">
+    <link rel="apple-touch-icon" href="https://pub-2da555791ab446dd9afa8c2352f4f9ea.r2.dev/media/favicon-francesco-biondi-music.svg">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    
     <style>
       body {
         font-family: 'Inter', sans-serif;
@@ -23,7 +40,10 @@
       .font-handwritten {
         font-family: 'Caveat', cursive;
       }
-      /* Utility to hide scrollbar but keep functionality */
+      /* Offset per lo scroll smooth per non coprire i titoli con la navbar */
+      section {
+        scroll-margin-top: 80px;
+      }
       .no-scrollbar::-webkit-scrollbar {
         display: none;
       }
@@ -32,21 +52,22 @@
         scrollbar-width: none;
       }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
-    "framer-motion": "https://esm.sh/framer-motion@^11.11.11"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
-</head>
+
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://esm.sh/react@^19.2.3",
+        "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+        "react/": "https://esm.sh/react@^19.2.3/",
+        "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+        "framer-motion": "https://esm.sh/framer-motion@^11.11.11"
+      }
+    }
+    </script>
+    <link rel="stylesheet" href="/index.css">
+  </head>
   <body>
     <div id="root"></div>
-  <script type="module" src="/index.tsx"></script>
-</body>
+    <script type="module" src="/index.tsx"></script>
+  </body>
 </html>
