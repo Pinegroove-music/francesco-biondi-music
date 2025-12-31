@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const Footer: React.FC = () => {
@@ -14,9 +13,13 @@ const Footer: React.FC = () => {
 
   const handleOpenCookieSettings = (e: React.MouseEvent) => {
     e.preventDefault();
+    // Se l'attributo data-cc non dovesse bastare, usiamo l'API JS come fallback
     if (window.CookieConsent) {
-      // In v3 il metodo corretto è showPreferences()
-      window.CookieConsent.showPreferences();
+      try {
+        window.CookieConsent.showPreferences();
+      } catch (err) {
+        console.error("CookieConsent error:", err);
+      }
     }
   };
 
@@ -29,6 +32,7 @@ const Footer: React.FC = () => {
           <div className="mt-2">
              <button 
               onClick={handleOpenCookieSettings}
+              data-cc="show-preferences"
               className="text-zinc-600 hover:text-amber-500 text-[10px] uppercase tracking-widest transition-colors duration-300 underline underline-offset-4"
             >
               Cookie Settings
