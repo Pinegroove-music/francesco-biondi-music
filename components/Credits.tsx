@@ -97,7 +97,7 @@ const Credits: React.FC = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 border-b border-zinc-800 pb-8">
           <div>
             <h2 className="text-3xl md:text-4xl font-cinzel font-bold tracking-wide text-zinc-100 uppercase">Filmography & Credits</h2>
-            <p className="text-zinc-500 mt-2 uppercase tracking-widest text-[10px]">Scroll to explore the portfolio (Latest first)</p>
+            <p className="text-zinc-500 mt-2 uppercase tracking-widest text-[10px]">Scroll to explore some of the movies where my music has been placed</p>
           </div>
           
           <div className="hidden md:flex space-x-4 mt-6 md:mt-0">
