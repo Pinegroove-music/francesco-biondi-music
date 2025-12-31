@@ -41,8 +41,8 @@ const CookieConsentComponent = () => {
                 acceptAllBtn: 'I agree',
                 acceptNecessaryBtn: 'I decline',
                 showSettingsBtn: 'Settings',
-                // Using data-cc="show-settings" to open the policy sections directly
-                footer: '<a href="#settings" data-cc="show-settings">Privacy Policy</a>'
+                // Corretto l'attributo in data-cc="show-preferences"
+                footer: '<a href="#preferences" data-cc="show-preferences" class="cc-link">Privacy Policy</a>'
               },
               settingsModal: {
                 title: 'Privacy & Cookie Policy',
@@ -53,8 +53,12 @@ const CookieConsentComponent = () => {
                 serviceCounterLabel: 'Service|Services',
                 sections: [
                   {
+                    title: 'Privacy Policy',
+                    description: 'Last updated: May 20, 2024'
+                  },
+                  {
                     title: '1. Overview',
-                    description: 'Last updated: May 20, 2024<br><br>This website serves as a professional portfolio. Your privacy is important to me, and I am committed to being transparent about how this site operates.'
+                    description: 'This website serves as a professional portfolio. Your privacy is important to me, and I am committed to being transparent about how this site operates.'
                   },
                   {
                     title: '2. Data Collection',

@@ -15,7 +15,8 @@ const Footer: React.FC = () => {
   const handleOpenCookieSettings = (e: React.MouseEvent) => {
     e.preventDefault();
     if (window.CookieConsent) {
-      window.CookieConsent.showSettings();
+      // In v3 il metodo corretto è showPreferences()
+      window.CookieConsent.showPreferences();
     }
   };
 
