@@ -26,7 +26,7 @@ const Bio: React.FC = () => {
         <div className="relative group">
           <div className="absolute -inset-4 border border-amber-500/20 group-hover:border-amber-500/40 transition-colors duration-500" />
           <img 
-            src="https://pub-2da555791ab446dd9afa8c2352f4f9ea.r2.dev/media/media_Francesco-Biondi-profilo.webp" 
+            src="https://media.pinegroove.net//media/media_Francesco-Biondi-profilo.webp" 
             alt="Francesco Biondi Portrait" 
             className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700 object-cover shadow-2xl"
           />

@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0"
         style={{ 
-          backgroundImage: "url('https://pub-704d512baed74c069032320c83ebe2f7.r2.dev/francesco-biondi-wallpaper.webp')",
+          backgroundImage: "url('https://assets.pinegroove.net/francesco-biondi-wallpaper.webp')",
           filter: "brightness(1.0)"
         }}
       />

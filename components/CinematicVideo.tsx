@@ -3,7 +3,7 @@ import React, { useRef, useEffect } from 'react';
 
 const CinematicVideo: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const videoUrl = "https://pub-704d512baed74c069032320c83ebe2f7.r2.dev/BalkanGypsy.mp4";
+  const videoUrl = "https://assets.pinegroove.net/BalkanGypsy.mp4";
 
   useEffect(() => {
     if (videoRef.current) {
